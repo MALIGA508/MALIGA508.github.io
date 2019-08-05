@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>linux笔记 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="Linux系统命令cd /var/www/html 网站根目录IP addr/ipconfig    查看自己IP地址nmap    安装文件rpm -ivh + 地址    下载文件tar zxvf    解压下载好的文件yum install +文件名 联网下载 ls     -a  -l      ls -al /etc/    查看目录下的文件vi     vi /etc/passwd">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux笔记">
+<meta property="og:url" content="http://yoursite.com/2019/08/05/inunx/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Linux系统命令cd /var/www/html 网站根目录IP addr/ipconfig    查看自己IP地址nmap    安装文件rpm -ivh + 地址    下载文件tar zxvf    解压下载好的文件yum install +文件名 联网下载 ls     -a  -l      ls -al /etc/    查看目录下的文件vi     vi /etc/passwd">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/2019/08/05/inunx/title.jpg">
+<meta property="og:updated_time" content="2019-08-05T11:43:07.563Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="linux笔记">
+<meta name="twitter:description" content="Linux系统命令cd /var/www/html 网站根目录IP addr/ipconfig    查看自己IP地址nmap    安装文件rpm -ivh + 地址    下载文件tar zxvf    解压下载好的文件yum install +文件名 联网下载 ls     -a  -l      ls -al /etc/    查看目录下的文件vi     vi /etc/passwd">
+<meta name="twitter:image" content="http://yoursite.com/2019/08/05/inunx/title.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.webp">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+  <script>
+  let antiquityStorage = window.sessionStorage.getItem('antiquitySessionStorage');
+  if (antiquityStorage == '' || antiquityStorage == null) {
+    var antiquityLoader = '<div id="loaderbox"><div class="loader"><div class="load-roll"><div class="load-top"></div><div class="load-right"></div><div class="load-bottom"></div></div></div></div>';
+    document.write(antiquityLoader);
+    document.body.style.overflow = 'hidden'
+  }
+  </script>
+</head>
+</html>
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-inunx" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      linux笔记
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/08/05/inunx/" class="article-date">
+  <time datetime="2019-08-05T11:35:18.315Z" itemprop="datePublished">2019-08-05</time>
+</a>
+    
+    
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <p>Linux系统命令<br>cd /var/www/html 网站根目录<br>IP addr/ipconfig    查看自己IP地址<br>nmap    安装文件<br>rpm -ivh + 地址    下载文件<br>tar zxvf    解压下载好的文件<br>yum install +文件名 联网下载</p>
+<p>ls     -a  -l      ls -al /etc/    查看目录下的文件<br>vi     vi /etc/passwd        编译文件<br>vim    vim /etc/passwd    编译文件<br>ifconfig    ifconfig        显示或设置网络<br>ping   ping 8.8.8.8        查看网络是否连接<br>curl   curl <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a><br>cat    cat /etc/passwd    查看文件<br>more   more a.txt        查看文件内同（按页来查看）<br>cd     cd /etc/httpd/conf    返回上一层文件夹<br>cp     -r     cp /etc/sys…/ifcfg-eth0  /etc/sys…/ifcfg-eth0.bak      拷贝/重命名<br>mkdir  -p     mkdir -p /root/a/b/c/d/e/f        新建文件夹<br>touch  touch a.txt        修改文件目录时间<br>rm     -r -f   rm a.txt    rm -rf /*    删除文件<br>rmdir  rmdir /root/a/    删除文件目录（目录必须为空文件夹）<br>mv     mv /etc/passwd/ /root/passwd.bak    移动文件或改名<br>head   -n    head -n 10 a.txt        管理用户组和管理文件权限<br>grep   grep “zs-ls” a.txt        搜索文件<br>find   -name      find / -name *.log    查找文件或目录<br>whereis     whereis ls        查找文件<br>pwd    pwd            显示所在文件的绝对路径<br>poweroff                关机<br>shutdown -h now            关机<br>reboot     reload            重启<br>logout                注销<br>whoami                显示用户名称<br>ctrl + z                后台运行<br>ss -antlp                查看端口</p>
+<p>###防火墙<br>iptables -A    追加<br>iptables -p    指定协议类型<br> -A INPUT     所有发出去请求都被禁用<br>-j DROP        所有进入请求都被禁用<br>nslookup  nslookup <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a>    查找DNS<br>zip   zip a.zip /www/a        压缩文件<br>unzip unzip a.zip<br>|     管道符    ps -aux | grep root</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>   输出重定向     ps -zux  &gt; /tmp/tmp.txt  ps -zux  &gt;&gt; /tmp/tmp.txt<br>echo   echo 1321<br>VIM<br>三种模式<br>命令模式<br>dd   p   x  vyp  u   /   n<br>插入模式<br>i a o I A O<br>末行模式<br>:w    :wq   :q! :set nu  :set nonu    :%s/word1/word2/g<br>用户<br>/etc/passwd     用户信息<br>/etc/group      组信息<br>/etc/shadow     密码相关<br>root:x:0:0:root:/root:/bin/bash<br>用户名  x  uid  gid  名字  家目录   登录后启动的脚本<br>root:x:0:<br>组名字   x   gid  组员<br>root:$6$Xf7Mz580:17750:0:99999:7:::<br>用户名     密码   。。。<br>useradd    添加用户    useradd zs<br>userdel    删除用户<br>userdel  -r   zs   删除用户所有信息<br>usermod    修改用户信息<br>usermod -s  /sbin/nologin  锁定登录脚本<br>usermod -d  /home/123 修改家目录<br>usermod -G -a root zs   把zs用户加入到root组<br>groupadd   添加一个组<br>groupdel   删除一个组<br>groupmod   修改一个组<br>groupmod -g 123 zs   修改zs组的gid为123<br>groupmod -n ls zs    修改zs组的名字为ls<br>passwd   修改密码<br>passwd root  修改root的密码<br>systemctl        服务<br>systemctl stop network    关闭网络<br>sys       temctl start nekwork    开启网络5<br>文件权限<br>-rw-r–r–<br>文件类型</p>
+<ul>
+<li>普通文件<br>d    文件夹/目录<br>b/c  驱动等硬件设备<br>l    链接文件</li>
+</ul>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>文件权限</p>
+<p>r   针对文件   读/可以查看文件内容    针对文件夹  读/可以列出问价夹里面的内容<br>w   针对文件   写/可以修改文件内容    针对文件夹  读/可以创建文件<br>x   针对文件   读/可以执行           针对文件夹  读/可以切换到目录</p>
+<p>rwx =&gt;  421</p>
+<p>chmod 777 a.txt<br>chmod a+x a.txt</p>
+<pre><code>a/u/g/o  +/-/=  r/w/x
+655
+-R      修改文件夹下所有的文件</code></pre><p>chown   apache:apache   a.txt</p>
+<pre><code>-R   修改文件夹下所有的文件</code></pre><p>三部分</p>
+<p>第一部分  前三个-针对于所属用户<br>第二部分  中间三个-针对于所属组<br>第三部分  最后三个-针对于其他用户</p>
+<p>安装软件</p>
+<p>三种安装方式</p>
+<p>yum<br>        yum search vim<br>        yum install + 路径<br>        yum remove + 文件名     卸载文件</p>
+<p>wgat</p>
+<p>rpm<br>        rpm -ivh a.rpm </p>
+<pre><code>源码
+    ./configure   --prefix=   --help
+    make
+    make install</code></pre><p>搭建环境<br>apache<br>    yum install httpd httpd-devel httpd-menaul mod_ssl mod_perl mod_auth_mysql -y<br>    service httpd start<br>    vi /etc/httpd/conf/httpd.conf<br>        ServerName <a href="http://www.icq.com" target="_blank" rel="noopener">www.icq.com</a></p>
+<pre><code>service httpd restart
+chkconfig httpd on
+netstat -antlp 查看80端口是否打开，用curl访问一下，curl 127.0.0.1</code></pre><p>mysql<br>    yum install mysql-server mysql -y<br>    chkconfig mysqld on<br>    service mysqld start<br>    netstat -antlp 查看3306端口是否打开<br>    mysql_secure_installation</p>
+<pre><code>mysql -uroot -p</code></pre><p>php<br>    yum install php php-mysql php-gd libjpeg* php-imap php-ldap php-odbc php-pear php-xml php-xmlrpc php-mbstring php-mcrypt php-bcmath php-mhash libmcrypt -y</p>
+<pre><code>service httpd restart</code></pre><p>vi /etc/sysconfig/iptables<br>    添加<br>    -A INPUT -m state –state NEW -m tcp -p tcp –dport 80 -j ACCEPT</p>
+<pre><code>在-A INPUT -j REJECT --reject-with icmp-host-prohibited之前
+
+service iptables restart</code></pre><p>vi /var/www/html/index.php<br>    <?php
+    phpinfo();
+    ?></p>
+<p>vi /etc/selinux/config<br>    SELINUX=disabled</p>
+<pre><code>reboot</code></pre><p>搭建网站</p>
+<p>准备源代码</p>
+<p>将源代码复制到虚拟机内     /var/www/html/</p>
+<p>windows用xftp<br>mac用scp<br>    cd wordpress<br>    scp -r ./* <a href="mailto:root@10.211.55.14" target="_blank" rel="noopener">root@10.211.55.14</a>:/var/www/html</p>
+<p>chown -R apache:apache /var/www/html</p>
+<p>浏览器打开虚拟机ip，开始安装网站</p>
+<p>mysql -uroot -p<br>create database 名字</p>
+<p>连接数据库<br>    输入数据库用户名，数据库密码，数据库名字</p>
+<p>三、</p>
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <title></title>
+</head>
+<body>
+
+</body>
+</html>
+
+<meta charset="utf-8">
+<title>标题</title>
+
+<h1>字号</h1>
+<p>段落</p>
+<pre>保持段落格式</pre>
+<a href="http://www.baidu.com" target="_blank" rel="noopener">链接</a>
+<img src="title.jpg">图片
+<br>换行
+<center>居中</center>
+<hr> 横线
+
+
+<table>
+    表格
+    <tr>行
+        <td>列</td>
+    </tr>
+<table>
+
+<form action="login.php" 数据发到哪一个文件 method="POST/GET" 指定数据提交方式>
+表单
+    <input 输入框 type="text/password/submit/file" 类型 name="user/pass" 名字 value="zhangsan" 默认值>
+</form>
+
+<p>标签的属性-css</p>
+<input type name style="height:50px/50%;length:50%;background:red">
+
+<style type="text/css">
+/*       body {
+        background-color: red; 
+        padding: 20px;
+    }*/
+    p {
+        background-color: red;
+    }
+</style>
+
+<p>标签的操作-javascript</p>
+<script type="text/javascript">
+    var abc = "123";
+    alert(abc);
+    document.write("12313");
+    window.location.href='http://www.baidu.com';
+</script>
+
+
+<p>四、</p>
+<p>环境配置</p>
+<p>lamp    linux+apache+mysql+php<br>wamp    windows+apache+mysql+php<br>mamp    macos+apache+mysql+php</p>
+<p>windows使用phpstudy，wamp<br>mac使用mamp pro</p>
+<p>编辑器，ida,sublime text,vscode</p>
+<p>基础语法</p>
+<p>标签：<?php     ?><br>注释：//   /*  */   #<br>输出：echo    var_dump  echo(123)  print()   die(‘退出’)   exit(‘退出’)<br>字符串：’123’,”abc”,”ab’c “, ‘a”bc’, ‘ab&#39;cd’,”ads&quot;asds”<br>一行代码结束： ;  英文的分号<br>变量<br>定义变量：$a = 231;<br>定义常量：define(“NAME”,123456);<br>8种变量类型：布尔型、整型、浮点型、字符串、资源类型、空类型、数组、对象<br>布尔型:$a = true/false<br>整型:$a = 1232143232<br>浮点型:$a = 2.3123<br>字符串:$a = ‘qwdad’ “2e32f23f”<br>资源类型:$a = fopen()   curl_init<br>空类型:$a = null<br>数组:$a = array(1,2,3,4,)   {‘name’=&gt;’zs’,’pass’=&gt;’pass’}<br>对象:$a = new student()<br>var_dump()<br>运算</p>
+<ul>
+<li><ul>
+<li><ul>
+<li>/ %<br>结果是整数类型或者浮点型<blockquote>
+<p>&lt; == &lt;= &gt;=<br>结果是true/false<br>and  or  !  &amp;&amp;  ||<br>结果是true/false</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>=<br>.   $a = $_POST[‘abc’]; $b = $_GET[‘456’]; $c = $a.$b; echo “</p><h1>“.$a.”</h1>“;<br>$c = true ? 123 : 5;<br>if (true){<br>    $c = 123;<br>}else{<br>    $c = 5;<br>}<br>循环控制<br>if (){<br>}else{<br>}<br>if (){<br>}elseif(){<br>}else{<br>}<br>$a = $_POST[‘name’]<br>swich ($a){<br>    case ‘zs’:<br>        echo ‘name is zhangsan’;<br>        break;<br>    case ‘ls’:<br>        echo ‘name is lisi’<br>        break;<br>    defsult :<br>        echo ‘name is 123’;<br>        break;<br>}<p></p>
+</table></table>
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2019/08/05/网卡配置/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            网卡配置
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/07/31/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">Hello World</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    
+<div id="gitmentContainer"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.webp" title="图片来自网络"></img>
+    <h3 class="avatar-name">
+      
+        一路烟霞
+      
+    </h3>
+    <p class="avatar-slogan">
+      特别耐撕的小前端，资深的打酱油攻城狮。
+    </p>
+  </div>
+</div>
+
+
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/08/05/数据库/">mysql</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/05/HTML/">HTML</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/05/python/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/05/虚拟机安装及配置/">虚拟机安装及配置</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/05/网卡配置/">网卡配置</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://yiluyanxia.github.io/" title target='_blank'
+        >一路眼瞎</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2019 John Doe &nbsp;&nbsp;
+    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>

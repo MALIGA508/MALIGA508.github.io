@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>虚拟机安装及配置 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="内容总结：    关于虚拟机-准备一个centos7虚拟机    要求有四个快照        第一个：初始化安装系统的快照（关机，快照备注详细信息）        第二个：在快照一的基础上，安装lamp环境的快照（关机，安装php5.6，安全初始化mysql）        第三个：在快照二的基础上，安装phpmyadmin和worpdpres（关机，wordpress放在网站根目录）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="虚拟机安装及配置">
+<meta property="og:url" content="http://yoursite.com/2019/08/05/虚拟机安装及配置/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="内容总结：    关于虚拟机-准备一个centos7虚拟机    要求有四个快照        第一个：初始化安装系统的快照（关机，快照备注详细信息）        第二个：在快照一的基础上，安装lamp环境的快照（关机，安装php5.6，安全初始化mysql）        第三个：在快照二的基础上，安装phpmyadmin和worpdpres（关机，wordpress放在网站根目录）">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-08-05T11:44:43.426Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="虚拟机安装及配置">
+<meta name="twitter:description" content="内容总结：    关于虚拟机-准备一个centos7虚拟机    要求有四个快照        第一个：初始化安装系统的快照（关机，快照备注详细信息）        第二个：在快照一的基础上，安装lamp环境的快照（关机，安装php5.6，安全初始化mysql）        第三个：在快照二的基础上，安装phpmyadmin和worpdpres（关机，wordpress放在网站根目录）">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.webp">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+  <script>
+  let antiquityStorage = window.sessionStorage.getItem('antiquitySessionStorage');
+  if (antiquityStorage == '' || antiquityStorage == null) {
+    var antiquityLoader = '<div id="loaderbox"><div class="loader"><div class="load-roll"><div class="load-top"></div><div class="load-right"></div><div class="load-bottom"></div></div></div></div>';
+    document.write(antiquityLoader);
+    document.body.style.overflow = 'hidden'
+  }
+  </script>
+</head>
+</html>
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-虚拟机安装及配置" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      虚拟机安装及配置
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/08/05/虚拟机安装及配置/" class="article-date">
+  <time datetime="2019-08-05T11:43:15.814Z" itemprop="datePublished">2019-08-05</time>
+</a>
+    
+    
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <p>内容总结：<br>    关于虚拟机-准备一个centos7虚拟机<br>    要求有四个快照<br>        第一个：初始化安装系统的快照（关机，快照备注详细信息）<br>        第二个：在快照一的基础上，安装lamp环境的快照（关机，安装php5.6，安全初始化mysql）<br>        第三个：在快照二的基础上，安装phpmyadmin和worpdpres（关机，wordpress放在网站根目录）<br>        第四个：在快照二的基础上，安装VAuditDemo-debug（关机，放在网站根目录中）</p>
+<p>关于今天内容：<br>主要是搭建apache+php+mysql环境<br>要求使用php5.6<br>        1、安装httpd<br>        # yum install httpd httpd-devel httpd-manual mod_ssl -y<br>        # systemctl start httpd // 启动apache<br>        # systemctl enable httpd  // 设置apache开机自启<br>        # ss -antlp  // 查看开放端口，检查有没有httpd服务，80和443端口是否开放<br>        2、配置防火墙，可以正常访问apache<br>        # firewall-cmd –zone=public –add-port=80/tcp –permanent<br>        # firewall-cmd –zone=public –add-port=443/tcp –permanent<br>        # firewall-cmd –reload //操作完成后使用浏览器访问虚拟机ip，确认是否正常<br>        3、安装php5.6<br>        由于centos7官方源中没有php5.6，因此需要使用第三方源来安装<br>        # rpm -Uvh <a href="https://mirror.webtatic.com/yum/el7/epel-release.rpm" target="_blank" rel="noopener">https://mirror.webtatic.com/yum/el7/epel-release.rpm</a><br>        # rpm -Uvh <a href="https://mirror.webtatic.com/yum/el7/webtatic-release.rpm" target="_blank" rel="noopener">https://mirror.webtatic.com/yum/el7/webtatic-release.rpm</a> //加入第三方源<br>        # yum remove php-common -y //卸载系统中原有的php<br>        # yum install -y php56w php56w-opcache php56w-xml php56w-mcrypt php56w-gd php56w-mysql php56w-intl php56w-mbstring   //安装php5.6和php的扩展<br>        # cd /var/www/html //进入网站根目录<br>        # echo ‘<?php phpinfo();?>‘ &gt; index.php //在网站根目录中创建index.php，写入phpinfo代码，用来测试网站php是否正常。<br>        4、安装mariadb<br>        # yum install mariadb-server -y<br>        # systemctl start mariadb // 启动mariadb-server<br>        # systemctl enable mariadb  // 设置mariadb-server开机自启<br>        # mysql_secure_installation //初始化mysql，注意记住mysql密码和初始化过程<br>        # poweroff //关机加快照，写好备注<br>    关于网站搭建：<br>        需要将网站的源代码使用工具复制到虚拟机中的网站根目录下（phpmyadmin除外）<br>        修改网站的所有者为apache<br>        # chown -R apache:apache /var/www/html<br>        wordpress特性：<br>            移动网站后，网站的样式将出错，所以wordpress在安装成功后，不能移动<br>            虚拟机ip改变后，wordpress打开会卡页面，需要去数据库中修改ip<br>            wp_options表中<br>            siteurl : http://新ip<br>            home : http://新ip<br>        搭建没有提供安装引导的网站：<br>            上传网站源码到网站根目录，找到网站的配置文件，一般是config.php<br>            再找到网站提供的sql文件，使用phpmyadmin之类的工具，导入数据<br>            或者直接使用mysql -uroot -p登录数据库<br>            # create database <code>设置中的数据库名称</code><br>            # use <code>设置中的数据库名称</code><br>            # source ‘系统中.sql结尾的文件的绝对路径’<br>            // 向数据库中导入内容，有多重方式，可以自行测试</p>
+
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2019/08/05/python/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            <div>没有了</div>
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/08/05/网卡配置/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">网卡配置</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    
+<div id="gitmentContainer"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.webp" title="图片来自网络"></img>
+    <h3 class="avatar-name">
+      
+        一路烟霞
+      
+    </h3>
+    <p class="avatar-slogan">
+      特别耐撕的小前端，资深的打酱油攻城狮。
+    </p>
+  </div>
+</div>
+
+
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/08/05/数据库/">mysql</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/05/HTML/">HTML</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/05/python/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/05/虚拟机安装及配置/">虚拟机安装及配置</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/05/网卡配置/">网卡配置</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://yiluyanxia.github.io/" title target='_blank'
+        >一路眼瞎</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2019 John Doe &nbsp;&nbsp;
+    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>

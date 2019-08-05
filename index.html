@@ -63,6 +63,424 @@
       <div id="middlecontent" title class="global-width sidebar-right">
         <section id="main">
   
+    <article id="post-数据库" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/05/数据库/">mysql</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/08/05/数据库/" class="article-date">
+  <time datetime="2019-08-05T11:49:59.830Z" itemprop="datePublished">2019-08-05</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <p>create databases；创建数据库<br>创建数据表：create table 数据表名（项名 类型 . .，项名 类型 . .，……）；<br>show databases； 显示所有数据库<br>use 数据库名； 表示进入数据库<br>show tables； 显示所有数据表<br>select * from 数据表名； 查看数据表里的数据<br>插入：insert into 字段名（省略不写的表示所以字段）values 值； （字段名1-&gt;值1 字段名2-&gt;值2…顺序一样个数一样）<br>更新：update 表名 set 字段名 = 值； （where 字段名=值 and 字段名=值）<br>查询：select 字段列表 from 表名；（where 字段名=值 and 字段名=值）<br>删除：delete from 表名；（where 字段名=值 and 字段名=值）<br>创建数据库：create database 数据库名；<br>删除列表：drop table 表名 …；<br>删除数据库：drop database 数据库名；<br>查看表属性：describe 表名；<br>修改表属性：alter table 表名 modify column 字段名 类型；<br>修改表名：rename table 原表名 to 以后的表名； </p>
+
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
+    <article id="post-HTML" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/05/HTML/">HTML</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/08/05/HTML/" class="article-date">
+  <time datetime="2019-08-05T11:48:31.220Z" itemprop="datePublished">2019-08-05</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <p>HTML<br><meter>utf-8</meter></p>
+<h1></h1> 标题
+<p></p> 段落
+<a href="“需要跳转的链接”">跳转按钮</a>链接
+<img src="“图片地址”">图片
+<ul>无序列表
+<ol>有序列表
+form表单--提交数据
+<form action="地址" method="post/get">   #post看不到数据#get可以在地址栏里看到数据
+<input type="“text”name="uname"">  #输入框
+<input type="“submit”name=“submit"" value="“名字">   #submit 提交
+<input type="“checkbox”name=""">  #勾选框
+</form>  
+<form action="地址" method="post" enctype="multipart/form-data">##必须post请求 上传文件
+<table>表格
+    <tr>行
+        <th>名字</th>表头    
+    </tr>    
+    <tr>行
+        <td>张三</td>列名        
+    </tr>    
+</table>
+<button>123456</button>按钮
+<center></center>居中
+PHP
+eceho    输出
+print    输出内容需要括号
+die    结束输出
+var_dump(getopt('n:b:c'));    创建一个新数组
+int    整数
+float    浮点型    小数
+bool    布尔类型 True    False
+null    空    null
+string    字符串    
+array    数组
+define（“名称”，“值”）；    定义一个常量
+__FILE__    查看文件路径
+__DIR__    查看文件夹
+__LINE__    当前代码所在的行数
+字符串的拼接用点连接 
+break    跳出循环</form></ol></ul>
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
+    <article id="post-python" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+  <div class="article-meta">
+    <a href="/2019/08/05/python/" class="article-date">
+  <time datetime="2019-08-05T11:45:24.981Z" itemprop="datePublished">2019-08-05</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <hr>
+<h2 id="title-python"><a href="#title-python" class="headerlink" title="title: python"></a>title: python</h2><pre><code>python</code></pre><p>#encoding:utf-8 乱码处理<br>a=input（“请您输入你的银行存款”）  控制台输入——出现input 只能在IDLE里执行</p>
+<p>变量直接申明</p>
+<p>#单行注释 ‘’’ …’’’ 多行注释</p>
+<p>/t 加在字符串中可以存在空格<br>/n 加在字符串可以自动换行<br>r 表示取消转义</p>
+<p>int 整数型</p>
+<p>str 字符串</p>
+<p>bool 布尔型 只存在两个状态 对（True） 或 错（False）</p>
+<p>None 表示空值</p>
+<p>==判断两个值是否相等</p>
+<p>变量转换数据类型           变量名=数据类型（变量名）                字符串不能转化为数字类型/数字不能转换为字符串</p>
+<p>算数运算符号<br>//除法 并且省略小数保留整数<br>**乘法次方<br>比较运算符         所有值都是bool吧（布尔值）<br>==判断两边相等<br>!=不等于</p>
+<blockquote>
+<p>=大于或等于<br>&lt;=小于或等于<br>赋值运算符<br>=      赋值</p>
+</blockquote>
+<h1 id="在原来的基础上加上一个值-（a-3-a-3-print（a）-a-6）"><a href="#在原来的基础上加上一个值-（a-3-a-3-print（a）-a-6）" class="headerlink" title="+=   在原来的基础上加上一个值    （a=3         a+=3     print（a）  a=6）"></a>+=   在原来的基础上加上一个值    （a=3         a+=3     print（a）  a=6）</h1><p>/=<br>%=<br>**=<br>//=<br>逻辑运算符    都是bool（布尔值）<br>and    与    真真  为    真   有假必假<br>or    或    有真   为   真   假假为假<br>not    非    取反<br>先算  算数运算 再算赋值 再算逻辑<br>列表（list）<br>属于list类型<br>索引 取出数组中的一个值<br>    例如 a=【1,2,3,4，”hello”，”世界”】<br>    print（a【4】）//这里的4代表的是下标<br>    输出结果 holle<br>替换数组中的一个值<br>        例如：<br>        a=【1,2,3,4，”hello”，”世界”】<br>        a【3】=”张三”<br>        print（a）<br>输出结果【1,2,3,”张三”，”hello”，”世界”】<br>列表的切片<br>取出数组中的几个数<br>print（a【0:4】）//0和4代表的是下标0开始4之前的下标<br>print（a【-4:-1】）//从后开始-1是最后一个数据<br>添加元素<br>append—-a.append（”zhangsan”）<br>删除元素<br>remove—-a.remove（1212）//1212 是删除的数据<br>索引删除<br>del —del .a【4】//4是下标为4的数字<br>pop—a.pop（5）//5是下标为5的数字<br>索引增加<br>insert—a.insert（3,666）//3是制定的位置的下标 666是添加的数据<br>获取集合、数组的长度<br>print（len（a））<br>元组（tuple）数据是固定的 不可更该的<br>字典（dict）a={“name”:”张三”,”age”:14,”hobby”:”打球”}//键不能重复，值可以重复<br>输出 print（a【“name”】）用键找值<br>集合（set）<br>a={1,2,3,4,5,”上山打老虎”}<br>b=set([1,2,3,4,5])<br>list1=[1,2,2,3,3,3,4,4,4,5,5]#列表<br>x=set(list1)#去重—因为集合不能出现重复的数据<br>y=list(x)#转回集合<br>print(y)<br>集合—值不能相同<br>a={1,2,3,4,5,6}<br>b={4,5,6,7,8,9}<br>print(a-b)#集合的差集<br>print(a|b)#集合的并集<br>print(a&amp;b)#集合的交集<br>print(a^b)#集合的对称差<br>if结构<br>cunkuan=120//申明一个变量<br>if cunkuan&gt;100:<br>    print(“可以买宝马！”)//print必须缩进<br>    print(“好开心！”)<br>else:            //否则–否则后不用跟条件<br>    print(“骑自行车吧”)<br>elif多条件判断<br>cunkuan=10<br>if cunkuan&gt;100:        //第一个条件<br>    print(“买宝马”)<br>elif cunkuan&gt;50:        //第二个条件<br>    print(“买丰田”)<br>elif cunkuan&gt;20:        //第三个条件<br>    print(“买二手车”)<br>else:            //第最后一个条件<br>    print(“骑自行车”)<br>嵌套if<br>cunkuan=101<br>zizhu=19<br>if cunkuan&gt;100:<br>    print(“买宝马”)<br>    if zizhu&gt;50:<br>        print(“买740”)<br>    elif zizhu&gt;30:<br>        print(“买520”)<br>    elif zizhu&gt;20:<br>        print(“买320”)<br>    else:<br>        print(“买宝马二手”)<br>elif cunkuan&gt;50:<br>    print(“买丰田”)<br>elif cunkuan&gt;20:<br>    print(“买二手车”)<br>else:<br>    print(“骑自行车”)<br>循环结构<br>for 元素变量 in 序列：//元素变量就是变量名， 序列就是范围和范围的值<br>    输出（hello）//需要重复的语句<br>for i in range(1,100,1):// i是for循环的名称 range 范围 （1,100，1）分别是初值，终值，间距<br>    print(“hello”)//输出hello100次<br>for i in range(1000)://1000是需要循环的次数，但是从0开始 循环 1000次 最大次数999<br>    print(“hello”)//输出hello1000次 从0次开始到999次 共1000次<br>for i in range(50,1000)://对序列进行遍历<br>    list1=[1,2,3,4,5]        //列表<br>    tuple1=[5,6,7,8,9]        //集合<br>    dict1={“name”:”张三”,”age”:18}//字典<br>    for i in list1:<br>        print(i)<br>    输出结果：1,2,3,4</p>
+<p>#获取集合中的最大值<br>a=[456,123,789,147,258,369]<br>maxx=a[0]<br>for x in range(0,len(a)-1):<br>    if maxx&lt;=a[x+1]:<br>        maxx=a[x+1]<br>print(maxx)</p>
+<p>###while循环<br>while循环–循环直到条件不在满足<br>i=0<br>while i&lt;=100:<br>    print(i)<br>    i=i+1<br>输出结果0-100<br>continue —- 结束当前循环，直接开始下一次循环（嵌套中）<br>break —- 跳出循环<br>当循环条件为一直为真的时候，会形成死循环<br>i=1<br>while 1==1://条件始终未真<br>    print(i)<br>    i=i+1</p>
+<p>#函数<br>def square(x)://def函数关键字 square 函数名 X参数<br>    s=x*x<br>    return s //s返回值<br>例<br>def f1(a):#申明一个函数<br>    print(a,”方法f1被执行了！”)<br>f1(“666,”)#调用函数//把666这个值赋给了f1并且输出了<br>输出结果为：666，方法f1被执行了！<br>例<br>def add(a,b,c,d):<br>    e=a+b+c+d<br>    return e<br>x=add(23,4,5,9)#用X来接受<br>print(“本次相加的结果为：”,x)#输出X就等于输出add(23,4,5,9)  最终输出的值为e</p>
+<p>#参数<br>例<br>def show(name,age,sex):#形参<br>    print(“我叫：”,name,”年龄：”,age,”性别：”,sex)</p>
+<h2 id="show-name-”张三”-age-18-sex-”男”-实参"><a href="#show-name-”张三”-age-18-sex-”男”-实参" class="headerlink" title="show(name=”张三”,age=18,sex=”男”)#实参"></a>show(name=”张三”,age=18,sex=”男”)#实参</h2><p>def a (*args)://不定长传递参数 aegs名称<br>python：内置函数</p>
+<p>#模块<br>import—引入模块</p>
+<p>##线程<br>import threading//引入模块<br>import time<br>def run(name):<br>    print(name,”线程执行了”)<br>    time.sleep(5)</p>
+<p>#创建线程<br>t1=threading.Thread(target=run,args=(“t1”,))<br>t2=threading.Thread(target=run,args=(“t2”,))</p>
+<p>#启动线程<br>t1.start()<br>t2.start()<br>t1.join()#设置子线程执行完毕后再执行主线程内容<br>t2.join()<br>print(“执行完毕”)</p>
+<p>#线程锁<br>import threading<br>lock=threading.Lock()#创建一个线程锁<br>num=100<br>def run(name0):<br>    lock.acquire()#设置锁<br>    global num#设置num为全局变量<br>    num=num-1<br>    print(“线程”,num,”执行了，目前num的值为：”,num)<br>    lock.release()#释放锁</p>
+<p>#创建并启动100个线程<br>for i in range(100):<br>    t=threading.Thread(target=run,args=(i+1,))<br>    t.start()</p>
+<p>#数据库</p>
+<p>#打开数据库连接 主机地址 端口号3306 用户名 密码 数据库名</p>
+
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
+    <article id="post-虚拟机安装及配置" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/05/虚拟机安装及配置/">虚拟机安装及配置</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/08/05/虚拟机安装及配置/" class="article-date">
+  <time datetime="2019-08-05T11:43:15.814Z" itemprop="datePublished">2019-08-05</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <p>内容总结：<br>    关于虚拟机-准备一个centos7虚拟机<br>    要求有四个快照<br>        第一个：初始化安装系统的快照（关机，快照备注详细信息）<br>        第二个：在快照一的基础上，安装lamp环境的快照（关机，安装php5.6，安全初始化mysql）<br>        第三个：在快照二的基础上，安装phpmyadmin和worpdpres（关机，wordpress放在网站根目录）<br>        第四个：在快照二的基础上，安装VAuditDemo-debug（关机，放在网站根目录中）</p>
+<p>关于今天内容：<br>主要是搭建apache+php+mysql环境<br>要求使用php5.6<br>        1、安装httpd<br>        # yum install httpd httpd-devel httpd-manual mod_ssl -y<br>        # systemctl start httpd // 启动apache<br>        # systemctl enable httpd  // 设置apache开机自启<br>        # ss -antlp  // 查看开放端口，检查有没有httpd服务，80和443端口是否开放<br>        2、配置防火墙，可以正常访问apache<br>        # firewall-cmd –zone=public –add-port=80/tcp –permanent<br>        # firewall-cmd –zone=public –add-port=443/tcp –permanent<br>        # firewall-cmd –reload //操作完成后使用浏览器访问虚拟机ip，确认是否正常<br>        3、安装php5.6<br>        由于centos7官方源中没有php5.6，因此需要使用第三方源来安装<br>        # rpm -Uvh <a href="https://mirror.webtatic.com/yum/el7/epel-release.rpm" target="_blank" rel="noopener">https://mirror.webtatic.com/yum/el7/epel-release.rpm</a><br>        # rpm -Uvh <a href="https://mirror.webtatic.com/yum/el7/webtatic-release.rpm" target="_blank" rel="noopener">https://mirror.webtatic.com/yum/el7/webtatic-release.rpm</a> //加入第三方源<br>        # yum remove php-common -y //卸载系统中原有的php<br>        # yum install -y php56w php56w-opcache php56w-xml php56w-mcrypt php56w-gd php56w-mysql php56w-intl php56w-mbstring   //安装php5.6和php的扩展<br>        # cd /var/www/html //进入网站根目录<br>        # echo ‘<?php phpinfo();?>‘ &gt; index.php //在网站根目录中创建index.php，写入phpinfo代码，用来测试网站php是否正常。<br>        4、安装mariadb<br>        # yum install mariadb-server -y<br>        # systemctl start mariadb // 启动mariadb-server<br>        # systemctl enable mariadb  // 设置mariadb-server开机自启<br>        # mysql_secure_installation //初始化mysql，注意记住mysql密码和初始化过程<br>        # poweroff //关机加快照，写好备注<br>    关于网站搭建：<br>        需要将网站的源代码使用工具复制到虚拟机中的网站根目录下（phpmyadmin除外）<br>        修改网站的所有者为apache<br>        # chown -R apache:apache /var/www/html<br>        wordpress特性：<br>            移动网站后，网站的样式将出错，所以wordpress在安装成功后，不能移动<br>            虚拟机ip改变后，wordpress打开会卡页面，需要去数据库中修改ip<br>            wp_options表中<br>            siteurl : http://新ip<br>            home : http://新ip<br>        搭建没有提供安装引导的网站：<br>            上传网站源码到网站根目录，找到网站的配置文件，一般是config.php<br>            再找到网站提供的sql文件，使用phpmyadmin之类的工具，导入数据<br>            或者直接使用mysql -uroot -p登录数据库<br>            # create database <code>设置中的数据库名称</code><br>            # use <code>设置中的数据库名称</code><br>            # source ‘系统中.sql结尾的文件的绝对路径’<br>            // 向数据库中导入内容，有多重方式，可以自行测试</p>
+
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
+    <article id="post-网卡配置" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/05/网卡配置/">网卡配置</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/08/05/网卡配置/" class="article-date">
+  <time datetime="2019-08-05T11:41:10.819Z" itemprop="datePublished">2019-08-05</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <p>配置上网<br>ping 8.8.8.8</p>
+<p>如果网络不通，怎么调试<br>    ifconfig查看网卡信息<br>    如果正常，ping 网关<br>    如果不正常，查看配置文件，网络环境</p>
+<pre><code>如果网卡默认不启用，修改配置文件，onboot=yes   重启网络服务
+    配置文件路径：/etc/sysconfig/network-script/ifcfg-eth0
+    cat /etc/sysconfig/network-script/ifcfg-eth0
+    vi /etc/sysconfig/network-script/ifcfg-eth0
+    onboot=yes
+    reboot/service network restart
+
+    关机加快照，加备注
+
+如果网络环境是dhcp，修改上网方式为dhcp     重启网络服务
+如果网络环境是静态ip，修改上网方式为static，ipaddr=，netmask=，gateway=。
+
+能够ping通8.8.8.8
+
+再用curl访问百度
+如果不能打开，查看dns配置文件。/etc/resolv.conf
+servername 1.1.1.1</code></pre>
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
+    <article id="post-inunx" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/05/inunx/">linux笔记</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/08/05/inunx/" class="article-date">
+  <time datetime="2019-08-05T11:35:18.315Z" itemprop="datePublished">2019-08-05</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <p>Linux系统命令<br>cd /var/www/html 网站根目录<br>IP addr/ipconfig    查看自己IP地址<br>nmap    安装文件<br>rpm -ivh + 地址    下载文件<br>tar zxvf    解压下载好的文件<br>yum install +文件名 联网下载</p>
+<p>ls     -a  -l      ls -al /etc/    查看目录下的文件<br>vi     vi /etc/passwd        编译文件<br>vim    vim /etc/passwd    编译文件<br>ifconfig    ifconfig        显示或设置网络<br>ping   ping 8.8.8.8        查看网络是否连接<br>curl   curl <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a><br>cat    cat /etc/passwd    查看文件<br>more   more a.txt        查看文件内同（按页来查看）<br>cd     cd /etc/httpd/conf    返回上一层文件夹<br>cp     -r     cp /etc/sys…/ifcfg-eth0  /etc/sys…/ifcfg-eth0.bak      拷贝/重命名<br>mkdir  -p     mkdir -p /root/a/b/c/d/e/f        新建文件夹<br>touch  touch a.txt        修改文件目录时间<br>rm     -r -f   rm a.txt    rm -rf /*    删除文件<br>rmdir  rmdir /root/a/    删除文件目录（目录必须为空文件夹）<br>mv     mv /etc/passwd/ /root/passwd.bak    移动文件或改名<br>head   -n    head -n 10 a.txt        管理用户组和管理文件权限<br>grep   grep “zs-ls” a.txt        搜索文件<br>find   -name      find / -name *.log    查找文件或目录<br>whereis     whereis ls        查找文件<br>pwd    pwd            显示所在文件的绝对路径<br>poweroff                关机<br>shutdown -h now            关机<br>reboot     reload            重启<br>logout                注销<br>whoami                显示用户名称<br>ctrl + z                后台运行<br>ss -antlp                查看端口</p>
+<p>###防火墙<br>iptables -A    追加<br>iptables -p    指定协议类型<br> -A INPUT     所有发出去请求都被禁用<br>-j DROP        所有进入请求都被禁用<br>nslookup  nslookup <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a>    查找DNS<br>zip   zip a.zip /www/a        压缩文件<br>unzip unzip a.zip<br>|     管道符    ps -aux | grep root</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>   输出重定向     ps -zux  &gt; /tmp/tmp.txt  ps -zux  &gt;&gt; /tmp/tmp.txt<br>echo   echo 1321<br>VIM<br>三种模式<br>命令模式<br>dd   p   x  vyp  u   /   n<br>插入模式<br>i a o I A O<br>末行模式<br>:w    :wq   :q! :set nu  :set nonu    :%s/word1/word2/g<br>用户<br>/etc/passwd     用户信息<br>/etc/group      组信息<br>/etc/shadow     密码相关<br>root:x:0:0:root:/root:/bin/bash<br>用户名  x  uid  gid  名字  家目录   登录后启动的脚本<br>root:x:0:<br>组名字   x   gid  组员<br>root:$6$Xf7Mz580:17750:0:99999:7:::<br>用户名     密码   。。。<br>useradd    添加用户    useradd zs<br>userdel    删除用户<br>userdel  -r   zs   删除用户所有信息<br>usermod    修改用户信息<br>usermod -s  /sbin/nologin  锁定登录脚本<br>usermod -d  /home/123 修改家目录<br>usermod -G -a root zs   把zs用户加入到root组<br>groupadd   添加一个组<br>groupdel   删除一个组<br>groupmod   修改一个组<br>groupmod -g 123 zs   修改zs组的gid为123<br>groupmod -n ls zs    修改zs组的名字为ls<br>passwd   修改密码<br>passwd root  修改root的密码<br>systemctl        服务<br>systemctl stop network    关闭网络<br>sys       temctl start nekwork    开启网络5<br>文件权限<br>-rw-r–r–<br>文件类型</p>
+<ul>
+<li>普通文件<br>d    文件夹/目录<br>b/c  驱动等硬件设备<br>l    链接文件</li>
+</ul>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>文件权限</p>
+<p>r   针对文件   读/可以查看文件内容    针对文件夹  读/可以列出问价夹里面的内容<br>w   针对文件   写/可以修改文件内容    针对文件夹  读/可以创建文件<br>x   针对文件   读/可以执行           针对文件夹  读/可以切换到目录</p>
+<p>rwx =&gt;  421</p>
+<p>chmod 777 a.txt<br>chmod a+x a.txt</p>
+<pre><code>a/u/g/o  +/-/=  r/w/x
+655
+-R      修改文件夹下所有的文件</code></pre><p>chown   apache:apache   a.txt</p>
+<pre><code>-R   修改文件夹下所有的文件</code></pre><p>三部分</p>
+<p>第一部分  前三个-针对于所属用户<br>第二部分  中间三个-针对于所属组<br>第三部分  最后三个-针对于其他用户</p>
+<p>安装软件</p>
+<p>三种安装方式</p>
+<p>yum<br>        yum search vim<br>        yum install + 路径<br>        yum remove + 文件名     卸载文件</p>
+<p>wgat</p>
+<p>rpm<br>        rpm -ivh a.rpm </p>
+<pre><code>源码
+    ./configure   --prefix=   --help
+    make
+    make install</code></pre><p>搭建环境<br>apache<br>    yum install httpd httpd-devel httpd-menaul mod_ssl mod_perl mod_auth_mysql -y<br>    service httpd start<br>    vi /etc/httpd/conf/httpd.conf<br>        ServerName <a href="http://www.icq.com" target="_blank" rel="noopener">www.icq.com</a></p>
+<pre><code>service httpd restart
+chkconfig httpd on
+netstat -antlp 查看80端口是否打开，用curl访问一下，curl 127.0.0.1</code></pre><p>mysql<br>    yum install mysql-server mysql -y<br>    chkconfig mysqld on<br>    service mysqld start<br>    netstat -antlp 查看3306端口是否打开<br>    mysql_secure_installation</p>
+<pre><code>mysql -uroot -p</code></pre><p>php<br>    yum install php php-mysql php-gd libjpeg* php-imap php-ldap php-odbc php-pear php-xml php-xmlrpc php-mbstring php-mcrypt php-bcmath php-mhash libmcrypt -y</p>
+<pre><code>service httpd restart</code></pre><p>vi /etc/sysconfig/iptables<br>    添加<br>    -A INPUT -m state –state NEW -m tcp -p tcp –dport 80 -j ACCEPT</p>
+<pre><code>在-A INPUT -j REJECT --reject-with icmp-host-prohibited之前
+
+service iptables restart</code></pre><p>vi /var/www/html/index.php<br>    <?php
+    phpinfo();
+    ?></p>
+<p>vi /etc/selinux/config<br>    SELINUX=disabled</p>
+<pre><code>reboot</code></pre><p>搭建网站</p>
+<p>准备源代码</p>
+<p>将源代码复制到虚拟机内     /var/www/html/</p>
+<p>windows用xftp<br>mac用scp<br>    cd wordpress<br>    scp -r ./* <a href="mailto:root@10.211.55.14" target="_blank" rel="noopener">root@10.211.55.14</a>:/var/www/html</p>
+<p>chown -R apache:apache /var/www/html</p>
+<p>浏览器打开虚拟机ip，开始安装网站</p>
+<p>mysql -uroot -p<br>create database 名字</p>
+<p>连接数据库<br>    输入数据库用户名，数据库密码，数据库名字</p>
+<p>三、</p>
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <title></title>
+</head>
+<body>
+
+</body>
+</html>
+
+<meta charset="utf-8">
+<title>标题</title>
+
+<h1>字号</h1>
+<p>段落</p>
+<pre>保持段落格式</pre>
+<a href="http://www.baidu.com" target="_blank" rel="noopener">链接</a>
+<img src="title.jpg">图片
+<br>换行
+<center>居中</center>
+<hr> 横线
+
+
+<table>
+    表格
+    <tr>行
+        <td>列</td>
+    </tr>
+<table>
+
+<form action="login.php" 数据发到哪一个文件 method="POST/GET" 指定数据提交方式>
+表单
+    <input 输入框 type="text/password/submit/file" 类型 name="user/pass" 名字 value="zhangsan" 默认值>
+</form>
+
+<p>标签的属性-css</p>
+<input type name style="height:50px/50%;length:50%;background:red">
+
+<style type="text/css">
+/*       body {
+        background-color: red; 
+        padding: 20px;
+    }*/
+    p {
+        background-color: red;
+    }
+</style>
+
+<p>标签的操作-javascript</p>
+<script type="text/javascript">
+    var abc = "123";
+    alert(abc);
+    document.write("12313");
+    window.location.href='http://www.baidu.com';
+</script>
+
+
+<p>四、</p>
+<p>环境配置</p>
+<p>lamp    linux+apache+mysql+php<br>wamp    windows+apache+mysql+php<br>mamp    macos+apache+mysql+php</p>
+<p>windows使用phpstudy，wamp<br>mac使用mamp pro</p>
+<p>编辑器，ida,sublime text,vscode</p>
+<p>基础语法</p>
+<p>标签：<?php     ?><br>注释：//   /*  */   #<br>输出：echo    var_dump  echo(123)  print()   die(‘退出’)   exit(‘退出’)<br>字符串：’123’,”abc”,”ab’c “, ‘a”bc’, ‘ab&#39;cd’,”ads&quot;asds”<br>一行代码结束： ;  英文的分号<br>变量<br>定义变量：$a = 231;<br>定义常量：define(“NAME”,123456);<br>8种变量类型：布尔型、整型、浮点型、字符串、资源类型、空类型、数组、对象<br>布尔型:$a = true/false<br>整型:$a = 1232143232<br>浮点型:$a = 2.3123<br>字符串:$a = ‘qwdad’ “2e32f23f”<br>资源类型:$a = fopen()   curl_init<br>空类型:$a = null<br>数组:$a = array(1,2,3,4,)   {‘name’=&gt;’zs’,’pass’=&gt;’pass’}<br>对象:$a = new student()<br>var_dump()<br>运算</p>
+<ul>
+<li><ul>
+<li><ul>
+<li>/ %<br>结果是整数类型或者浮点型<blockquote>
+<p>&lt; == &lt;= &gt;=<br>结果是true/false<br>and  or  !  &amp;&amp;  ||<br>结果是true/false</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>=<br>.   $a = $_POST[‘abc’]; $b = $_GET[‘456’]; $c = $a.$b; echo “</p><h1>“.$a.”</h1>“;<br>$c = true ? 123 : 5;<br>if (true){<br>    $c = 123;<br>}else{<br>    $c = 5;<br>}<br>循环控制<br>if (){<br>}else{<br>}<br>if (){<br>}elseif(){<br>}else{<br>}<br>$a = $_POST[‘name’]<br>swich ($a){<br>    case ‘zs’:<br>        echo ‘name is zhangsan’;<br>        break;<br>    case ‘ls’:<br>        echo ‘name is lisi’<br>        break;<br>    defsult :<br>        echo ‘name is 123’;<br>        break;<br>}<p></p>
+</table></table>
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
     <article id="post-hello-world" class="article global-container article-type-post" itemscope itemprop="blogPost">
   
     <header class="article-header">
@@ -145,7 +563,7 @@
   <div class="widget-box">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
     </div>
   </div>
 
@@ -157,7 +575,23 @@
       <ul>
         
           <li>
-            <a href="/2019/07/31/hello-world/">Hello World</a>
+            <a href="/2019/08/05/数据库/">mysql</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/05/HTML/">HTML</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/05/python/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/05/虚拟机安装及配置/">虚拟机安装及配置</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/05/网卡配置/">网卡配置</a>
           </li>
         
       </ul>
