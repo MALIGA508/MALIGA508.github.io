@@ -17,12 +17,10 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Linux系统命令cd /var/www/html 网站根目录IP addr/ipconfig    查看自己IP地址nmap    安装文件rpm -ivh + 地址    下载文件tar zxvf    解压下载好的文件yum install +文件名 联网下载 ls     -a  -l      ls -al /etc/    查看目录下的文件vi     vi /etc/passwd">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/2019/08/05/inunx/title.jpg">
-<meta property="og:updated_time" content="2019-08-05T11:43:07.563Z">
+<meta property="og:updated_time" content="2019-08-05T12:00:59.309Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux笔记">
 <meta name="twitter:description" content="Linux系统命令cd /var/www/html 网站根目录IP addr/ipconfig    查看自己IP地址nmap    安装文件rpm -ivh + 地址    下载文件tar zxvf    解压下载好的文件yum install +文件名 联网下载 ls     -a  -l      ls -al /etc/    查看目录下的文件vi     vi /etc/passwd">
-<meta name="twitter:image" content="http://yoursite.com/2019/08/05/inunx/title.jpg">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -122,109 +120,31 @@
 <p>三种安装方式</p>
 <p>yum<br>        yum search vim<br>        yum install + 路径<br>        yum remove + 文件名     卸载文件</p>
 <p>wgat</p>
-<p>rpm<br>        rpm -ivh a.rpm </p>
-<pre><code>源码
-    ./configure   --prefix=   --help
-    make
-    make install</code></pre><p>搭建环境<br>apache<br>    yum install httpd httpd-devel httpd-menaul mod_ssl mod_perl mod_auth_mysql -y<br>    service httpd start<br>    vi /etc/httpd/conf/httpd.conf<br>        ServerName <a href="http://www.icq.com" target="_blank" rel="noopener">www.icq.com</a></p>
-<pre><code>service httpd restart
-chkconfig httpd on
-netstat -antlp 查看80端口是否打开，用curl访问一下，curl 127.0.0.1</code></pre><p>mysql<br>    yum install mysql-server mysql -y<br>    chkconfig mysqld on<br>    service mysqld start<br>    netstat -antlp 查看3306端口是否打开<br>    mysql_secure_installation</p>
-<pre><code>mysql -uroot -p</code></pre><p>php<br>    yum install php php-mysql php-gd libjpeg* php-imap php-ldap php-odbc php-pear php-xml php-xmlrpc php-mbstring php-mcrypt php-bcmath php-mhash libmcrypt -y</p>
-<pre><code>service httpd restart</code></pre><p>vi /etc/sysconfig/iptables<br>    添加<br>    -A INPUT -m state –state NEW -m tcp -p tcp –dport 80 -j ACCEPT</p>
-<pre><code>在-A INPUT -j REJECT --reject-with icmp-host-prohibited之前
-
-service iptables restart</code></pre><p>vi /var/www/html/index.php<br>    <?php
+<p>rpm<br>        rpm -ivh a.rpm<br>    源码<br>        ./configure   –prefix=   –help<br>        make<br>        make install</p>
+<p>搭建环境<br>apache<br>    yum install httpd httpd-devel httpd-menaul mod_ssl mod_perl mod_auth_mysql -y<br>    service httpd start<br>    vi /etc/httpd/conf/httpd.conf<br>        ServerName <a href="http://www.icq.com" target="_blank" rel="noopener">www.icq.com</a></p>
+<p>service httpd restart<br>chkconfig httpd on<br>netstat -antlp 查看80端口是否打开，用curl访问一下，curl 127.0.0.1</p>
+<p>mysql<br>    yum install mysql-server mysql -y<br>    chkconfig mysqld on<br>    service mysqld start<br>    netstat -antlp 查看3306端口是否打开<br>    mysql_secure_installation<br>    mysql -uroot -p</p>
+<p>php<br>    yum install php php-mysql php-gd libjpeg* php-imap php-ldap php-odbc php-pear php-xml php-xmlrpc php-mbstring php-mcrypt php-bcmath php-mhash libmcrypt -y<br>    service httpd restart<br>vi /etc/sysconfig/iptables<br>    添加<br>    -A INPUT -m state –state NEW -m tcp -p tcp –dport 80 -j ACCEPT<br>    在-A INPUT -j REJECT –reject-with icmp-host-prohibited之前<br>     service iptables restart</p>
+<p>vi /var/www/html/index.php<br>    <?php
     phpinfo();
     ?></p>
-<p>vi /etc/selinux/config<br>    SELINUX=disabled</p>
-<pre><code>reboot</code></pre><p>搭建网站</p>
-<p>准备源代码</p>
-<p>将源代码复制到虚拟机内     /var/www/html/</p>
-<p>windows用xftp<br>mac用scp<br>    cd wordpress<br>    scp -r ./* <a href="mailto:root@10.211.55.14" target="_blank" rel="noopener">root@10.211.55.14</a>:/var/www/html</p>
-<p>chown -R apache:apache /var/www/html</p>
-<p>浏览器打开虚拟机ip，开始安装网站</p>
-<p>mysql -uroot -p<br>create database 名字</p>
-<p>连接数据库<br>    输入数据库用户名，数据库密码，数据库名字</p>
-<p>三、</p>
-<!DOCTYPE html>
-<html>
-<head><meta name="generator" content="Hexo 3.9.0">
-    <title></title>
-</head>
-<body>
+<p>vi /etc/selinux/config<br>    SELINUX=disabled<br>    reboot<br>搭建网站<br>准备源代码<br>将源代码复制到虚拟机内     /var/www/html/<br>windows用xftp<br>mac用scp<br>    cd wordpress<br>    scp -r ./* <a href="mailto:root@10.211.55.14" target="_blank" rel="noopener">root@10.211.55.14</a>:/var/www/html<br>chown -R apache:apache /var/www/html<br>浏览器打开虚拟机ip，开始安装网站<br>mysql -uroot -p<br>create database 名字<br>连接数据库<br>    输入数据库用户名，数据库密码，数据库名字<br>三、</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;title&gt;&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br><span class="line"></span><br><span class="line">&lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">&lt;title&gt;标题&lt;/title&gt;</span><br><span class="line"></span><br><span class="line">&lt;h1&gt;字号&lt;/h1&gt;</span><br><span class="line">&lt;p&gt;段落&lt;/p&gt;</span><br><span class="line">&lt;pre&gt;保持段落格式&lt;/pre&gt;</span><br><span class="line">&lt;a href=&apos;http://www.baidu.com&apos;&gt;链接&lt;/a&gt;</span><br><span class="line">&lt;img src=&quot;title.jpg&quot;&gt;图片&lt;/img&gt;</span><br><span class="line">&lt;br /&gt;换行</span><br><span class="line">&lt;center&gt;居中&lt;/center&gt;</span><br><span class="line">&lt;hr /&gt; 横线</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;table&gt;</span><br><span class="line">    表格</span><br><span class="line">    &lt;tr&gt;行</span><br><span class="line">        &lt;td&gt;列&lt;/td&gt;</span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">&lt;table&gt;</span><br><span class="line"></span><br><span class="line">&lt;form action=&quot;login.php&quot; 数据发到哪一个文件 method=&quot;POST/GET&quot;  指定数据提交方式&gt;</span><br><span class="line">表单</span><br><span class="line">    &lt;input 输入框 type=&quot;text/password/submit/file&quot;  类型 name=&quot;user/pass&quot; 名字  value=&quot;zhangsan&quot; 默认值 &gt;</span><br><span class="line">&lt;/form&gt;</span><br><span class="line"></span><br><span class="line">标签的属性-css</span><br><span class="line"></span><br><span class="line">&lt;input type=&apos;&apos; name=&apos;&apos; style=&quot;height:50px/50%;length:50%;background:red&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">/*       body &#123;</span><br><span class="line">        background-color: red; </span><br><span class="line">        padding: 20px;</span><br><span class="line">    &#125;*/</span><br><span class="line">    p &#123;</span><br><span class="line">        background-color: red;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br><span class="line">标签的操作-javascript</span><br><span class="line"></span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">    var abc = &quot;123&quot;;</span><br><span class="line">    alert(abc);</span><br><span class="line">    document.write(&quot;12313&quot;);</span><br><span class="line">    window.location.href=&apos;http://www.baidu.com&apos;;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></div>
 
-</body>
-</html>
-
-<meta charset="utf-8">
-<title>标题</title>
-
-<h1>字号</h1>
-<p>段落</p>
-<pre>保持段落格式</pre>
-<a href="http://www.baidu.com" target="_blank" rel="noopener">链接</a>
-<img src="title.jpg">图片
-<br>换行
-<center>居中</center>
-<hr> 横线
-
-
-<table>
-    表格
-    <tr>行
-        <td>列</td>
-    </tr>
-<table>
-
-<form action="login.php" 数据发到哪一个文件 method="POST/GET" 指定数据提交方式>
-表单
-    <input 输入框 type="text/password/submit/file" 类型 name="user/pass" 名字 value="zhangsan" 默认值>
-</form>
-
-<p>标签的属性-css</p>
-<input type name style="height:50px/50%;length:50%;background:red">
-
-<style type="text/css">
-/*       body {
-        background-color: red; 
-        padding: 20px;
-    }*/
-    p {
-        background-color: red;
-    }
-</style>
-
-<p>标签的操作-javascript</p>
-<script type="text/javascript">
-    var abc = "123";
-    alert(abc);
-    document.write("12313");
-    window.location.href='http://www.baidu.com';
-</script>
-
-
-<p>四、</p>
-<p>环境配置</p>
-<p>lamp    linux+apache+mysql+php<br>wamp    windows+apache+mysql+php<br>mamp    macos+apache+mysql+php</p>
-<p>windows使用phpstudy，wamp<br>mac使用mamp pro</p>
-<p>编辑器，ida,sublime text,vscode</p>
-<p>基础语法</p>
-<p>标签：<?php     ?><br>注释：//   /*  */   #<br>输出：echo    var_dump  echo(123)  print()   die(‘退出’)   exit(‘退出’)<br>字符串：’123’,”abc”,”ab’c “, ‘a”bc’, ‘ab&#39;cd’,”ads&quot;asds”<br>一行代码结束： ;  英文的分号<br>变量<br>定义变量：$a = 231;<br>定义常量：define(“NAME”,123456);<br>8种变量类型：布尔型、整型、浮点型、字符串、资源类型、空类型、数组、对象<br>布尔型:$a = true/false<br>整型:$a = 1232143232<br>浮点型:$a = 2.3123<br>字符串:$a = ‘qwdad’ “2e32f23f”<br>资源类型:$a = fopen()   curl_init<br>空类型:$a = null<br>数组:$a = array(1,2,3,4,)   {‘name’=&gt;’zs’,’pass’=&gt;’pass’}<br>对象:$a = new student()<br>var_dump()<br>运算</p>
+<p>四、环境配置<br>lamp    linux+apache+mysql+php<br>wamp    windows+apache+mysql+php<br>mamp    macos+apache+mysql+php<br>windows使用phpstudy，wamp<br>mac使用mamp pro<br>编辑器，ida,sublime text,vscode<br>基础语法<br>标签：<?php     ?><br>注释：//   /*  */   #<br>输出：echo    var_dump  echo(123)  print()   die(‘退出’)   exit(‘退出’)<br>字符串：’123’,”abc”,”ab’c “, ‘a”bc’, ‘ab&#39;cd’,”ads&quot;asds”<br>一行代码结束： ;  英文的分号<br>变量<br>定义变量：$a = 231;<br>定义常量：define(“NAME”,123456);<br>8种变量类型：布尔型、整型、浮点型、字符串、资源类型、空类型、数组、对象<br>布尔型:$a = true/false<br>整型:$a = 1232143232<br>浮点型:$a = 2.3123<br>字符串:$a = ‘qwdad’ “2e32f23f”<br>资源类型:$a = fopen()   curl_init<br>空类型:$a = null<br>数组:$a = array(1,2,3,4,)   {‘name’=&gt;’zs’,’pass’=&gt;’pass’}<br>对象:$a = new student()<br>var_dump()<br>运算</p>
 <ul>
 <li><ul>
 <li><ul>
 <li>/ %<br>结果是整数类型或者浮点型<blockquote>
-<p>&lt; == &lt;= &gt;=<br>结果是true/false<br>and  or  !  &amp;&amp;  ||<br>结果是true/false</p>
+<p>&lt; == &lt;= &gt;=<br>结果是true/false<br>and  or  !  &amp;&amp;  ||<br>结果是true/false<br>=</p>
 </blockquote>
-</li>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">$a = $_POST[&apos;abc&apos;]; $b = $_GET[&apos;456&apos;]; $c = $a.$b; echo &quot;&lt;h1&gt;&quot;.$a.&quot;&lt;/h1&gt;&quot;;</span><br><span class="line">$c = true ? 123 : 5;</span><br><span class="line">if (true)&#123;</span><br><span class="line">    $c = 123;</span><br><span class="line">&#125;else&#123;</span><br><span class="line">    $c = 5;</span><br><span class="line">&#125;</span><br><span class="line">循环控制</span><br><span class="line">if ()&#123;    </span><br><span class="line">&#125;else&#123;  </span><br><span class="line">&#125;</span><br><span class="line">if ()&#123;   </span><br><span class="line">&#125;elseif()&#123;  </span><br><span class="line">&#125;else&#123;   </span><br><span class="line">&#125;</span><br><span class="line">$a = $_POST[&apos;name&apos;]</span><br><span class="line">swich ($a)&#123;</span><br><span class="line">    case &apos;zs&apos;:</span><br><span class="line">        echo &apos;name is zhangsan&apos;;</span><br><span class="line">        break;</span><br><span class="line">    case &apos;ls&apos;:</span><br><span class="line">        echo &apos;name is lisi&apos;</span><br><span class="line">        break;</span><br><span class="line">    defsult :</span><br><span class="line">        echo &apos;name is 123&apos;;</span><br><span class="line">        break;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-<p>=<br>.   $a = $_POST[‘abc’]; $b = $_GET[‘456’]; $c = $a.$b; echo “</p><h1>“.$a.”</h1>“;<br>$c = true ? 123 : 5;<br>if (true){<br>    $c = 123;<br>}else{<br>    $c = 5;<br>}<br>循环控制<br>if (){<br>}else{<br>}<br>if (){<br>}elseif(){<br>}else{<br>}<br>$a = $_POST[‘name’]<br>swich ($a){<br>    case ‘zs’:<br>        echo ‘name is zhangsan’;<br>        break;<br>    case ‘ls’:<br>        echo ‘name is lisi’<br>        break;<br>    defsult :<br>        echo ‘name is 123’;<br>        break;<br>}<p></p>
-</table></table>
+
       
     </div>
     
@@ -285,11 +205,11 @@ gitment.render('gitmentContainer')
     <img class="avatar" src="/images/default-avatar.webp" title="图片来自网络"></img>
     <h3 class="avatar-name">
       
-        一路烟霞
+        小小少年
       
     </h3>
     <p class="avatar-slogan">
-      特别耐撕的小前端，资深的打酱油攻城狮。
+      曾经小小少年，到如今风度翩翩。
     </p>
   </div>
 </div>
@@ -320,7 +240,11 @@ gitment.render('gitmentContainer')
       <ul>
         
           <li>
-            <a href="/2019/08/05/数据库/">mysql</a>
+            <a href="/2019/08/05/PHP/">PHP</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/05/mysql数据库/">mysql</a>
           </li>
         
           <li>
@@ -333,10 +257,6 @@ gitment.render('gitmentContainer')
         
           <li>
             <a href="/2019/08/05/虚拟机安装及配置/">虚拟机安装及配置</a>
-          </li>
-        
-          <li>
-            <a href="/2019/08/05/网卡配置/">网卡配置</a>
           </li>
         
       </ul>
