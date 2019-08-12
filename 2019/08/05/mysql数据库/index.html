@@ -10,17 +10,17 @@
   
   
   
-  <meta name="description" content="create databases；创建数据库创建数据表：create table 数据表名（项名 类型 . .，项名 类型 . .，……）；show databases； 显示所有数据库use 数据库名； 表示进入数据库show tables； 显示所有数据表select * from 数据表名； 查看数据表里的数据插入：insert into 字段名（省略不写的表示所以字段）values 值；">
+  <meta name="description" content="linux数据库路径/var/lib/mysql/默认路径 关联形数据库mysqloraclesql server(mssql)sqliteaccesspostgresqldb2非关联的数据库mongodbredis mysql -u root -p    进去数据库 show databases； 显示所有数据库  create database；创建数据库 show tables； 显示所有数">
 <meta property="og:type" content="article">
 <meta property="og:title" content="mysql">
 <meta property="og:url" content="http://yoursite.com/2019/08/05/mysql数据库/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="create databases；创建数据库创建数据表：create table 数据表名（项名 类型 . .，项名 类型 . .，……）；show databases； 显示所有数据库use 数据库名； 表示进入数据库show tables； 显示所有数据表select * from 数据表名； 查看数据表里的数据插入：insert into 字段名（省略不写的表示所以字段）values 值；">
+<meta property="og:description" content="linux数据库路径/var/lib/mysql/默认路径 关联形数据库mysqloraclesql server(mssql)sqliteaccesspostgresqldb2非关联的数据库mongodbredis mysql -u root -p    进去数据库 show databases； 显示所有数据库  create database；创建数据库 show tables； 显示所有数">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-05T11:50:51.821Z">
+<meta property="og:updated_time" content="2019-08-12T15:53:36.674Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mysql">
-<meta name="twitter:description" content="create databases；创建数据库创建数据表：create table 数据表名（项名 类型 . .，项名 类型 . .，……）；show databases； 显示所有数据库use 数据库名； 表示进入数据库show tables； 显示所有数据表select * from 数据表名； 查看数据表里的数据插入：insert into 字段名（省略不写的表示所以字段）values 值；">
+<meta name="twitter:description" content="linux数据库路径/var/lib/mysql/默认路径 关联形数据库mysqloraclesql server(mssql)sqliteaccesspostgresqldb2非关联的数据库mongodbredis mysql -u root -p    进去数据库 show databases； 显示所有数据库  create database；创建数据库 show tables； 显示所有数">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -94,7 +94,18 @@
     
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-        <p>create databases；创建数据库<br>创建数据表：create table 数据表名（项名 类型 . .，项名 类型 . .，……）；<br>show databases； 显示所有数据库<br>use 数据库名； 表示进入数据库<br>show tables； 显示所有数据表<br>select * from 数据表名； 查看数据表里的数据<br>插入：insert into 字段名（省略不写的表示所以字段）values 值； （字段名1-&gt;值1 字段名2-&gt;值2…顺序一样个数一样）<br>更新：update 表名 set 字段名 = 值； （where 字段名=值 and 字段名=值）<br>查询：select 字段列表 from 表名；（where 字段名=值 and 字段名=值）<br>删除：delete from 表名；（where 字段名=值 and 字段名=值）<br>创建数据库：create database 数据库名；<br>删除列表：drop table 表名 …；<br>删除数据库：drop database 数据库名；<br>查看表属性：describe 表名；<br>修改表属性：alter table 表名 modify column 字段名 类型；<br>修改表名：rename table 原表名 to 以后的表名； </p>
+        <p>linux数据库路径<br>/var/lib/mysql/默认路径</p>
+<p>关联形数据库<br>mysql<br>oracle<br>sql server(mssql)<br>sqlite<br>access<br>postgresql<br>db2<br>非关联的数据库<br>mongodb<br>redis</p>
+<p>mysql -u root -p    进去数据库</p>
+<p>show databases； 显示所有数据库 </p>
+<p>create database；创建数据库</p>
+<p>show tables； 显示所有数据表 </p>
+<p>use 数据库名； 表示进入数据库 </p>
+<p>创建数据表：create table ’数据表名 ’（项名 类型 . .，项名 类型 . .，……）；<br>auto_increment    设置主键<br>engine=innodb default charset=gbk; //设置字符集<br>primary key（‘字段名’）去重复<br>auto_increment    设置自增<br>timestamp default current_timestamp    创建时间</p>
+<p>数据表名； 查看数据表里的数据：select * from<br>//select <code>字段名</code>，<code>字段名</code>from<code>库名</code>.<code>表名</code>；<br>//select <code>字段名</code>，<code>字段名</code>from<code>库名</code>.<code>表名</code> where <code>id</code>&gt;2;1</p>
+<p>插入：insert into <code>库名</code>.<code>字段名</code>(<br>    需要添加的字段名<br>)values （<br>    字段所对应的值<br>);</p>
+<p>导入数据：source + 路径<br>mysql -u root -p 导入的库名 &lt; Desktop/新库名</p>
+<p>导出：mysqldump -uroot -p 指定一个库 &gt;Desktop/ mysql.sql</p>
 
       
     </div>
@@ -191,6 +202,10 @@ gitment.render('gitmentContainer')
       <ul>
         
           <li>
+            <a href="/2019/08/12/数据库查询/">数据库查询</a>
+          </li>
+        
+          <li>
             <a href="/2019/08/07/for循环遍历/">for循环遍历数组</a>
           </li>
         
@@ -204,10 +219,6 @@ gitment.render('gitmentContainer')
         
           <li>
             <a href="/2019/08/05/PHP/">PHP</a>
-          </li>
-        
-          <li>
-            <a href="/2019/08/05/mysql数据库/">mysql</a>
           </li>
         
       </ul>

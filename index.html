@@ -63,6 +63,41 @@
       <div id="middlecontent" title class="global-width sidebar-right">
         <section id="main">
   
+    <article id="post-数据库查询" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/12/数据库查询/">数据库查询</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/08/12/数据库查询/" class="article-date">
+  <time datetime="2019-08-12T15:40:47.702Z" itemprop="datePublished">2019-08-12</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">在phpstudy的根目录中CMD </span><br><span class="line">mysql -u root -p</span><br><span class="line">create database text；//创建TEXT数据库</span><br><span class="line">use text； //进去text数据库</span><br><span class="line">source \Users\Administrator\Desktop\message.sql  //导入数据</span><br><span class="line">在NAVICat中找到information_schema中找到columns里找到TEXT数据库中的两个表</span><br><span class="line">select`id`,title`,`author`,`value`,`time`,`ip` from `text`.content`;</span><br><span class="line">select `id`,`username`,`passwd`,`user_ip`,`join_date`from`text`.`users`;</span><br></pre></td></tr></table></figure></div>
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
     <article id="post-for循环遍历" class="article global-container article-type-post" itemscope itemprop="blogPost">
   
     <header class="article-header">
@@ -272,7 +307,18 @@ $arr['name'] = 'zs'; //创建空数组赋值
     
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-        <p>create databases；创建数据库<br>创建数据表：create table 数据表名（项名 类型 . .，项名 类型 . .，……）；<br>show databases； 显示所有数据库<br>use 数据库名； 表示进入数据库<br>show tables； 显示所有数据表<br>select * from 数据表名； 查看数据表里的数据<br>插入：insert into 字段名（省略不写的表示所以字段）values 值； （字段名1-&gt;值1 字段名2-&gt;值2…顺序一样个数一样）<br>更新：update 表名 set 字段名 = 值； （where 字段名=值 and 字段名=值）<br>查询：select 字段列表 from 表名；（where 字段名=值 and 字段名=值）<br>删除：delete from 表名；（where 字段名=值 and 字段名=值）<br>创建数据库：create database 数据库名；<br>删除列表：drop table 表名 …；<br>删除数据库：drop database 数据库名；<br>查看表属性：describe 表名；<br>修改表属性：alter table 表名 modify column 字段名 类型；<br>修改表名：rename table 原表名 to 以后的表名； </p>
+        <p>linux数据库路径<br>/var/lib/mysql/默认路径</p>
+<p>关联形数据库<br>mysql<br>oracle<br>sql server(mssql)<br>sqlite<br>access<br>postgresql<br>db2<br>非关联的数据库<br>mongodb<br>redis</p>
+<p>mysql -u root -p    进去数据库</p>
+<p>show databases； 显示所有数据库 </p>
+<p>create database；创建数据库</p>
+<p>show tables； 显示所有数据表 </p>
+<p>use 数据库名； 表示进入数据库 </p>
+<p>创建数据表：create table ’数据表名 ’（项名 类型 . .，项名 类型 . .，……）；<br>auto_increment    设置主键<br>engine=innodb default charset=gbk; //设置字符集<br>primary key（‘字段名’）去重复<br>auto_increment    设置自增<br>timestamp default current_timestamp    创建时间</p>
+<p>数据表名； 查看数据表里的数据：select * from<br>//select <code>字段名</code>，<code>字段名</code>from<code>库名</code>.<code>表名</code>；<br>//select <code>字段名</code>，<code>字段名</code>from<code>库名</code>.<code>表名</code> where <code>id</code>&gt;2;1</p>
+<p>插入：insert into <code>库名</code>.<code>字段名</code>(<br>    需要添加的字段名<br>)values （<br>    字段所对应的值<br>);</p>
+<p>导入数据：source + 路径<br>mysql -u root -p 导入的库名 &lt; Desktop/新库名</p>
+<p>导出：mysqldump -uroot -p 指定一个库 &gt;Desktop/ mysql.sql</p>
 
       
     </div>
@@ -450,91 +496,6 @@ servername 1.1.1.1</code></pre>
 </article>
 
   
-    <article id="post-inunx" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/05/inunx/">linux笔记</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2019/08/05/inunx/" class="article-date">
-  <time datetime="2019-08-05T11:35:18.315Z" itemprop="datePublished">2019-08-05</time>
-</a>
-    
-    
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <p>Linux系统命令<br>cd /var/www/html 网站根目录<br>IP addr/ipconfig    查看自己IP地址<br>nmap    安装文件<br>rpm -ivh + 地址    下载文件<br>tar zxvf    解压下载好的文件<br>yum install +文件名 联网下载</p>
-<p>ls     -a  -l      ls -al /etc/    查看目录下的文件<br>vi     vi /etc/passwd        编译文件<br>vim    vim /etc/passwd    编译文件<br>ifconfig    ifconfig        显示或设置网络<br>ping   ping 8.8.8.8        查看网络是否连接<br>curl   curl <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a><br>cat    cat /etc/passwd    查看文件<br>more   more a.txt        查看文件内同（按页来查看）<br>cd     cd /etc/httpd/conf    返回上一层文件夹<br>cp     -r     cp /etc/sys…/ifcfg-eth0  /etc/sys…/ifcfg-eth0.bak      拷贝/重命名<br>mkdir  -p     mkdir -p /root/a/b/c/d/e/f        新建文件夹<br>touch  touch a.txt        修改文件目录时间<br>rm     -r -f   rm a.txt    rm -rf /*    删除文件<br>rmdir  rmdir /root/a/    删除文件目录（目录必须为空文件夹）<br>mv     mv /etc/passwd/ /root/passwd.bak    移动文件或改名<br>head   -n    head -n 10 a.txt        管理用户组和管理文件权限<br>grep   grep “zs-ls” a.txt        搜索文件<br>find   -name      find / -name *.log    查找文件或目录<br>whereis     whereis ls        查找文件<br>pwd    pwd            显示所在文件的绝对路径<br>poweroff                关机<br>shutdown -h now            关机<br>reboot     reload            重启<br>logout                注销<br>whoami                显示用户名称<br>ctrl + z                后台运行<br>ss -antlp                查看端口</p>
-<p>###防火墙<br>iptables -A    追加<br>iptables -p    指定协议类型<br> -A INPUT     所有发出去请求都被禁用<br>-j DROP        所有进入请求都被禁用<br>nslookup  nslookup <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a>    查找DNS<br>zip   zip a.zip /www/a        压缩文件<br>unzip unzip a.zip<br>|     管道符    ps -aux | grep root</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>   输出重定向     ps -zux  &gt; /tmp/tmp.txt  ps -zux  &gt;&gt; /tmp/tmp.txt<br>echo   echo 1321<br>VIM<br>三种模式<br>命令模式<br>dd   p   x  vyp  u   /   n<br>插入模式<br>i a o I A O<br>末行模式<br>:w    :wq   :q! :set nu  :set nonu    :%s/word1/word2/g<br>用户<br>/etc/passwd     用户信息<br>/etc/group      组信息<br>/etc/shadow     密码相关<br>root:x:0:0:root:/root:/bin/bash<br>用户名  x  uid  gid  名字  家目录   登录后启动的脚本<br>root:x:0:<br>组名字   x   gid  组员<br>root:$6$Xf7Mz580:17750:0:99999:7:::<br>用户名     密码   。。。<br>useradd    添加用户    useradd zs<br>userdel    删除用户<br>userdel  -r   zs   删除用户所有信息<br>usermod    修改用户信息<br>usermod -s  /sbin/nologin  锁定登录脚本<br>usermod -d  /home/123 修改家目录<br>usermod -G -a root zs   把zs用户加入到root组<br>groupadd   添加一个组<br>groupdel   删除一个组<br>groupmod   修改一个组<br>groupmod -g 123 zs   修改zs组的gid为123<br>groupmod -n ls zs    修改zs组的名字为ls<br>passwd   修改密码<br>passwd root  修改root的密码<br>systemctl        服务<br>systemctl stop network    关闭网络<br>sys       temctl start nekwork    开启网络5<br>文件权限<br>-rw-r–r–<br>文件类型</p>
-<ul>
-<li>普通文件<br>d    文件夹/目录<br>b/c  驱动等硬件设备<br>l    链接文件</li>
-</ul>
-</blockquote>
-</blockquote>
-</blockquote>
-<p>文件权限</p>
-<p>r   针对文件   读/可以查看文件内容    针对文件夹  读/可以列出问价夹里面的内容<br>w   针对文件   写/可以修改文件内容    针对文件夹  读/可以创建文件<br>x   针对文件   读/可以执行           针对文件夹  读/可以切换到目录</p>
-<p>rwx =&gt;  421</p>
-<p>chmod 777 a.txt<br>chmod a+x a.txt</p>
-<pre><code>a/u/g/o  +/-/=  r/w/x
-655
--R      修改文件夹下所有的文件</code></pre><p>chown   apache:apache   a.txt</p>
-<pre><code>-R   修改文件夹下所有的文件</code></pre><p>三部分</p>
-<p>第一部分  前三个-针对于所属用户<br>第二部分  中间三个-针对于所属组<br>第三部分  最后三个-针对于其他用户</p>
-<p>安装软件</p>
-<p>三种安装方式</p>
-<p>yum<br>        yum search vim<br>        yum install + 路径<br>        yum remove + 文件名     卸载文件</p>
-<p>wgat</p>
-<p>rpm<br>        rpm -ivh a.rpm<br>    源码<br>        ./configure   –prefix=   –help<br>        make<br>        make install</p>
-<p>搭建环境<br>apache<br>    yum install httpd httpd-devel httpd-menaul mod_ssl mod_perl mod_auth_mysql -y<br>    service httpd start<br>    vi /etc/httpd/conf/httpd.conf<br>        ServerName <a href="http://www.icq.com" target="_blank" rel="noopener">www.icq.com</a></p>
-<p>service httpd restart<br>chkconfig httpd on<br>netstat -antlp 查看80端口是否打开，用curl访问一下，curl 127.0.0.1</p>
-<p>mysql<br>    yum install mysql-server mysql -y<br>    chkconfig mysqld on<br>    service mysqld start<br>    netstat -antlp 查看3306端口是否打开<br>    mysql_secure_installation<br>    mysql -uroot -p</p>
-<p>php<br>    yum install php php-mysql php-gd libjpeg* php-imap php-ldap php-odbc php-pear php-xml php-xmlrpc php-mbstring php-mcrypt php-bcmath php-mhash libmcrypt -y<br>    service httpd restart<br>vi /etc/sysconfig/iptables<br>    添加<br>    -A INPUT -m state –state NEW -m tcp -p tcp –dport 80 -j ACCEPT<br>    在-A INPUT -j REJECT –reject-with icmp-host-prohibited之前<br>     service iptables restart</p>
-<p>vi /var/www/html/index.php<br>    <?php
-    phpinfo();
-    ?></p>
-<p>vi /etc/selinux/config<br>    SELINUX=disabled<br>    reboot<br>搭建网站<br>准备源代码<br>将源代码复制到虚拟机内     /var/www/html/<br>windows用xftp<br>mac用scp<br>    cd wordpress<br>    scp -r ./* <a href="mailto:root@10.211.55.14" target="_blank" rel="noopener">root@10.211.55.14</a>:/var/www/html<br>chown -R apache:apache /var/www/html<br>浏览器打开虚拟机ip，开始安装网站<br>mysql -uroot -p<br>create database 名字<br>连接数据库<br>    输入数据库用户名，数据库密码，数据库名字<br>三、</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;title&gt;&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br><span class="line"></span><br><span class="line">&lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">&lt;title&gt;标题&lt;/title&gt;</span><br><span class="line"></span><br><span class="line">&lt;h1&gt;字号&lt;/h1&gt;</span><br><span class="line">&lt;p&gt;段落&lt;/p&gt;</span><br><span class="line">&lt;pre&gt;保持段落格式&lt;/pre&gt;</span><br><span class="line">&lt;a href=&apos;http://www.baidu.com&apos;&gt;链接&lt;/a&gt;</span><br><span class="line">&lt;img src=&quot;title.jpg&quot;&gt;图片&lt;/img&gt;</span><br><span class="line">&lt;br /&gt;换行</span><br><span class="line">&lt;center&gt;居中&lt;/center&gt;</span><br><span class="line">&lt;hr /&gt; 横线</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;table&gt;</span><br><span class="line">    表格</span><br><span class="line">    &lt;tr&gt;行</span><br><span class="line">        &lt;td&gt;列&lt;/td&gt;</span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">&lt;table&gt;</span><br><span class="line"></span><br><span class="line">&lt;form action=&quot;login.php&quot; 数据发到哪一个文件 method=&quot;POST/GET&quot;  指定数据提交方式&gt;</span><br><span class="line">表单</span><br><span class="line">    &lt;input 输入框 type=&quot;text/password/submit/file&quot;  类型 name=&quot;user/pass&quot; 名字  value=&quot;zhangsan&quot; 默认值 &gt;</span><br><span class="line">&lt;/form&gt;</span><br><span class="line"></span><br><span class="line">标签的属性-css</span><br><span class="line"></span><br><span class="line">&lt;input type=&apos;&apos; name=&apos;&apos; style=&quot;height:50px/50%;length:50%;background:red&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">/*       body &#123;</span><br><span class="line">        background-color: red; </span><br><span class="line">        padding: 20px;</span><br><span class="line">    &#125;*/</span><br><span class="line">    p &#123;</span><br><span class="line">        background-color: red;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br><span class="line">标签的操作-javascript</span><br><span class="line"></span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">    var abc = &quot;123&quot;;</span><br><span class="line">    alert(abc);</span><br><span class="line">    document.write(&quot;12313&quot;);</span><br><span class="line">    window.location.href=&apos;http://www.baidu.com&apos;;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></div>
-
-<p>四、环境配置<br>lamp    linux+apache+mysql+php<br>wamp    windows+apache+mysql+php<br>mamp    macos+apache+mysql+php<br>windows使用phpstudy，wamp<br>mac使用mamp pro<br>编辑器，ida,sublime text,vscode<br>基础语法<br>标签：<?php     ?><br>注释：//   /*  */   #<br>输出：echo    var_dump  echo(123)  print()   die(‘退出’)   exit(‘退出’)<br>字符串：’123’,”abc”,”ab’c “, ‘a”bc’, ‘ab&#39;cd’,”ads&quot;asds”<br>一行代码结束： ;  英文的分号<br>变量<br>定义变量：$a = 231;<br>定义常量：define(“NAME”,123456);<br>8种变量类型：布尔型、整型、浮点型、字符串、资源类型、空类型、数组、对象<br>布尔型:$a = true/false<br>整型:$a = 1232143232<br>浮点型:$a = 2.3123<br>字符串:$a = ‘qwdad’ “2e32f23f”<br>资源类型:$a = fopen()   curl_init<br>空类型:$a = null<br>数组:$a = array(1,2,3,4,)   {‘name’=&gt;’zs’,’pass’=&gt;’pass’}<br>对象:$a = new student()<br>var_dump()<br>运算</p>
-<ul>
-<li><ul>
-<li><ul>
-<li>/ %<br>结果是整数类型或者浮点型<blockquote>
-<p>&lt; == &lt;= &gt;=<br>结果是true/false<br>and  or  !  &amp;&amp;  ||<br>结果是true/false<br>=</p>
-</blockquote>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">$a = $_POST[&apos;abc&apos;]; $b = $_GET[&apos;456&apos;]; $c = $a.$b; echo &quot;&lt;h1&gt;&quot;.$a.&quot;&lt;/h1&gt;&quot;;</span><br><span class="line">$c = true ? 123 : 5;</span><br><span class="line">if (true)&#123;</span><br><span class="line">    $c = 123;</span><br><span class="line">&#125;else&#123;</span><br><span class="line">    $c = 5;</span><br><span class="line">&#125;</span><br><span class="line">循环控制</span><br><span class="line">if ()&#123;    </span><br><span class="line">&#125;else&#123;  </span><br><span class="line">&#125;</span><br><span class="line">if ()&#123;   </span><br><span class="line">&#125;elseif()&#123;  </span><br><span class="line">&#125;else&#123;   </span><br><span class="line">&#125;</span><br><span class="line">$a = $_POST[&apos;name&apos;]</span><br><span class="line">swich ($a)&#123;</span><br><span class="line">    case &apos;zs&apos;:</span><br><span class="line">        echo &apos;name is zhangsan&apos;;</span><br><span class="line">        break;</span><br><span class="line">    case &apos;ls&apos;:</span><br><span class="line">        echo &apos;name is lisi&apos;</span><br><span class="line">        break;</span><br><span class="line">    defsult :</span><br><span class="line">        echo &apos;name is 123&apos;;</span><br><span class="line">        break;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
 
 
   <nav id="page-nav">
@@ -586,6 +547,10 @@ servername 1.1.1.1</code></pre>
       <ul>
         
           <li>
+            <a href="/2019/08/12/数据库查询/">数据库查询</a>
+          </li>
+        
+          <li>
             <a href="/2019/08/07/for循环遍历/">for循环遍历数组</a>
           </li>
         
@@ -599,10 +564,6 @@ servername 1.1.1.1</code></pre>
         
           <li>
             <a href="/2019/08/05/PHP/">PHP</a>
-          </li>
-        
-          <li>
-            <a href="/2019/08/05/mysql数据库/">mysql</a>
           </li>
         
       </ul>
