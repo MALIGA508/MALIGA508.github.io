@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="PHPeceho    输出print    输出内容需要括号die    结束输出var_dump(getopt(‘n:b:c’));    创建一个新数组int    整数float    浮点型    小数bool    布尔类型 True    Falsenull    空    nullstring    字符串array    数组define（“名称”，“值”）；    定义一个常量">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-05T12:07:34.669Z">
+<meta property="og:updated_time" content="2019-08-07T13:35:31.962Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PHP">
 <meta name="twitter:description" content="PHPeceho    输出print    输出内容需要括号die    结束输出var_dump(getopt(‘n:b:c’));    创建一个新数组int    整数float    浮点型    小数bool    布尔类型 True    Falsenull    空    nullstring    字符串array    数组define（“名称”，“值”）；    定义一个常量">
@@ -95,6 +95,23 @@
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
         <p>PHP<br>eceho    输出<br>print    输出内容需要括号<br>die    结束输出<br>var_dump(getopt(‘n:b:c’));    创建一个新数组<br>int    整数<br>float    浮点型    小数<br>bool    布尔类型 True    False<br>null    空    null<br>string    字符串<br>array    数组<br>define（“名称”，“值”）；    定义一个常量<br><strong>FILE</strong>    查看文件路径<br><strong>DIR</strong>    查看文件夹<br><strong>LINE</strong>    当前代码所在的行数<br>字符串的拼接用点连接<br>break    跳出循环</p>
+<p>$arr = array(1,2,3,4);    数组/索引数组 通过下标取值 echo $arr[0]//取出下标为零<br>$arr = array(‘name’ =&gt; ‘zs’ , ‘ age’ =&gt; 19);    数组/关联数值 通过键取值 echo $arr[‘name’];//取出键为name相对应的值<br>$arr = [];<br>$arr = [1,2,3,4];<br>//5.4以上的版本<br>$arr = [1,2,3,4]<br>$arr = [‘name’ =&gt; ‘zs’ , ‘ age’ =&gt; 18]</p>
+<p>遍历数组<br>$arr = array(1,2,3,4,5);</p>
+<p>for ($i = 0 ; $i&lt;5; $i++){<br> echo $arr[$i];<br>}</p>
+<!--
+for($i = 0 ; $i <count($arr) ; $i ++ ){//count($arr) 获取数组长度
+echo $arr[$i];
+}
+
+关联数组
+
+$arr = array('name' => 'zhangsan' , ,'age' =>19);
+$arr = ['name' => 'zhangsan' , 'age' =>19];
+$arr =[]
+$arr = array()
+$arr['name'] = 'zs'; //创建空数组赋值
+-->
+<p>取值<br>$_GET[‘id’]<br>$_post[‘uname’]<br>$arr[‘id’]<br>foreach($arr as $key=&gt;$value){<br>echo$arr;<br>}<br>常用函数<br>array_keys($arr)    返回一个索引数组 包含所有数组的键<br>array_values($arr)    返回一个索引数组 包含所有数组的值<br>count()<br>sizeof()<br>array_merge()    合并数组 相当于 +<br>array_key_exists()    判断键是否存在<br>sort()        排序<br>in_array()        判断元素是否在数组中<br>array_unique()    去重<br>array_pop()    删除最后一个元素</p>
 
       
     </div>
